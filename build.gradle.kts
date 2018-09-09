@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "io.damtoft"
-version = "0.1"
+version = "0.1.1"
 
 repositories {
   jcenter()
@@ -47,7 +47,6 @@ bintray {
   user = bintrayUser
   key = bintrayKey
   setPublications("mavenJava")
-  publish = true
   with(pkg) {
     repo = "kotlin-screeps"
     name = "kotlin-screeps"
