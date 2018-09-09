@@ -7,8 +7,8 @@ fun <T> jsObject(init: dynamic.() -> Unit): T =
 
 external interface JsPair<out F, out S>
 
-operator fun <F, S> JsPair<F, S>.component1(): F = asDynamic()[0] as F
-operator fun <F, S> JsPair<F, S>.component2(): S = asDynamic()[1] as S
+operator fun <F, S> JsPair<F, S>.component1(): F = asDynamic()[0].unsafeCast<F>()
+operator fun <F, S> JsPair<F, S>.component2(): S = asDynamic()[1].unsafeCast<S>()
 
 external interface Record<in K, out V> {
   operator fun get(key: K): V?
