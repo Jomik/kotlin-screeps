@@ -1,6 +1,6 @@
 package screeps
 
-abstract external class Source : RoomObject, Harvestable {
+abstract external class Source : RoomObject, Harvestable, Identifiable {
   val energy: Int
   val energyCapacity: Int
 }

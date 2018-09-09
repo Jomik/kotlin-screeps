@@ -1,10 +1,11 @@
 package screeps.structure
 
+import screeps.Identifiable
 import screeps.RoomObject
 import screeps.ScreepsReturnCode
 import screeps.StructureConstant
 
-abstract external class Structure : RoomObject {
+abstract external class Structure : RoomObject, Identifiable {
   val hits: Int
   val hitsMax: Int
   val structureType: StructureConstant

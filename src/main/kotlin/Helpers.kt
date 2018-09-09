@@ -2,6 +2,14 @@ package screeps
 
 import screeps.structure.Structure
 
+external interface Identifiable {
+  val id: String
+}
+
+external interface Named {
+  val name: String
+}
+
 external interface NavigationTarget
 external interface HasPos : NavigationTarget {
   val pos: RoomPosition
@@ -80,7 +88,11 @@ external interface RoomPositionWithRange {
 }
 
 external interface FilterOption<T> {
-  val filter: (T) -> Boolean
+  val filter: (T) -> Boolean?
+}
+
+external interface FindClosestByPathOptions<T> : FindPathOptions, FilterOption<T> {
+  val algorithm: AlgorithmConstant?
 }
 
 interface LookAtResult {

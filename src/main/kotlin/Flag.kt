@@ -1,9 +1,8 @@
 package screeps
 
-abstract external class Flag : RoomObject {
+abstract external class Flag : RoomObject, Named {
   val color: ColorConstant
   val memory: FlagMemory
-  val name: String
   val secondaryColor: ColorConstant
 
   fun remove()

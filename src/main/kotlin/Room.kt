@@ -3,11 +3,10 @@ package screeps
 import screeps.structure.StructureStorage
 import screeps.structure.StructureTerminal
 
-abstract external class Room {
+abstract external class Room : Named {
   val energyAvailable: Int
   val energyCapacityAvailable: Int
   val memory: RoomMemory
-  val name: String
   val storage: StructureStorage?
   val terminal: StructureTerminal?
   val visual: RoomVisual

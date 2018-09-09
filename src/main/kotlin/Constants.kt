@@ -262,6 +262,7 @@ external val SUBSCRIPTION_TOKEN: MarketResourceConstant
 
 external interface TerrainConstant : StringConstant
 external interface LineStyleConstant : StringConstant
+external interface AlgorithmConstant : StringConstant
 
 val TERRAIN_PLAIN: TerrainConstant = "plain".unsafeCast<TerrainConstant>()
 val TERRAIN_SWAMP: TerrainConstant = "swamp".unsafeCast<TerrainConstant>()
@@ -270,3 +271,6 @@ val TERRAIN_WALL: TerrainConstant = "wall".unsafeCast<TerrainConstant>()
 val LINE_STYLE_DASHED: LineStyleConstant = js("dashed").unsafeCast<LineStyleConstant>()
 val LINE_STYLE_DOTTED: LineStyleConstant = js("dotted").unsafeCast<LineStyleConstant>()
 val LINE_STYLE_SOLID: LineStyleConstant = js("solid").unsafeCast<LineStyleConstant>()
+
+val ALGORITHM_ASTAR: AlgorithmConstant = js("astar").unsafeCast<AlgorithmConstant>()
+val ALGORITHM_DIJKSTRA: AlgorithmConstant = js("dijkstra").unsafeCast<AlgorithmConstant>()

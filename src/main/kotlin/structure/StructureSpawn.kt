@@ -2,9 +2,8 @@ package screeps.structure
 
 import screeps.*
 
-abstract external class StructureSpawn : Structure, Owned, EnergyContainer {
+abstract external class StructureSpawn : Structure, Owned, EnergyContainer, Named {
   val memory: SpawnMemory
-  val name: String
   val spawning: Spawning?
   fun spawnCreep(body: Array<BodyPartConstant>, name: String, opts: SpawnOptions = definedExternally): ScreepsReturnCode
   fun recycleCreep(target: Creep): ScreepsReturnCode
@@ -23,7 +22,7 @@ abstract external class StructureSpawn : Structure, Owned, EnergyContainer {
   interface SpawnOptions {
     val memory: CreepMemory?
     val energyContainingStructures: Array<EnergyContainer>?
-    val dryRun: Boolean
+    val dryRun: Boolean?
     val directions: Array<DirectionConstant>?
   }
 }

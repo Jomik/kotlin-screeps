@@ -32,15 +32,15 @@ external object Game {
   }
 
   interface GCL {
-    var level: Int
-    var progress: Int
-    var progressTotal: Int
+    val level: Int
+    val progress: Int
+    val progressTotal: Int
   }
 
   interface Shard {
-    var name: String
-    var type: String
-    var ptr: Boolean
+    val name: String
+    val type: String
+    val ptr: Boolean
   }
 }
 

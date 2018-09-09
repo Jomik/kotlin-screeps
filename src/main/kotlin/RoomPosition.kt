@@ -18,20 +18,35 @@ external class RoomPosition(x: Int, y: Int, roomName: String) : HasCoordinates, 
 
   fun <T : RoomObject> findClosestByPath(
     objects: Array<NavigationTarget>,
-    opts: dynamic = definedExternally
+    opts: FindClosestByPathOptions<T> = definedExternally
   ): T?
 
-  fun <T : RoomObject> findClosestByPath(type: FindConstant, opts: dynamic = definedExternally): T?
+  fun <T : RoomObject> findClosestByPath(
+    type: FindConstant,
+    opts: FindClosestByPathOptions<T> = definedExternally
+  ): T?
 
   fun <T : RoomObject> findClosestByRange(
     objects: Array<NavigationTarget>,
-    opts: dynamic = definedExternally
+    opts: FilterOption<T> = definedExternally
   ): T?
 
-  fun <T : RoomObject> findClosestByRange(type: FindConstant, opts: dynamic = definedExternally): T?
+  fun <T : RoomObject> findClosestByRange(
+    type: FindConstant,
+    opts: FilterOption<T> = definedExternally
+  ): T?
 
-  fun <T : RoomObject> findInRange(objects: Array<NavigationTarget>, range: Int, opts: dynamic = definedExternally): Array<T>
-  fun <T : RoomObject> findInRange(type: FindConstant, range: Int, opts: dynamic = definedExternally): Array<T>
+  fun <T : RoomObject> findInRange(
+    objects: Array<NavigationTarget>,
+    range: Int,
+    opts: FilterOption<T> = definedExternally
+  ): Array<T>
+
+  fun <T : RoomObject> findInRange(
+    type: FindConstant,
+    range: Int, opts: FilterOption<T> = definedExternally
+  ): Array<T>
+
   fun getDirectionTo(x: Int, y: Int): DirectionConstant
   fun getDirectionTo(target: NavigationTarget): DirectionConstant
   fun getRangeTo(x: Int, y: Int): Int

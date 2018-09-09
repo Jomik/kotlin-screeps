@@ -20,14 +20,14 @@ abstract external class StructureController : Structure, Owned {
   fun unclaim(): ScreepsReturnCode
 
   interface ReservationDefinition {
-    var username: String
-    var ticksToEnd: Int
+    val username: String
+    val ticksToEnd: Int
   }
 
   interface SignDefinition {
-    var username: String
-    var text: String
-    var time: Int
-    var datetime: Date
+    val username: String
+    val text: String
+    val time: Int
+    val datetime: Date
   }
 }
