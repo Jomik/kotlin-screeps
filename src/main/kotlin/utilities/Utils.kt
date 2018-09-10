@@ -23,7 +23,7 @@ fun <T> filter(
 
 fun <T> routeOptions(
   routeCallback: (roomName: String, fromRoomName: String) -> Double
-): Map.RouteOptions =
+): Game.Map.RouteOptions =
   jsObject {
     this.routeCallback = routeCallback
   }
