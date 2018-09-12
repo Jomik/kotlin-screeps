@@ -14,5 +14,8 @@ fun foo() {
   Game.creeps.asIterable().filter { (_, c) ->
     c.pos.roomName === "W8N3"
   }
+
+  val f = Game.rooms["foo"]
+  Memory.creeps["foo"] = jsObject { }
 }
 
