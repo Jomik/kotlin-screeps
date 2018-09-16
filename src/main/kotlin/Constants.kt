@@ -53,7 +53,6 @@ external val FIND_MY_CREEPS: FindConstant /* 102 */
 external val FIND_HOSTILE_CREEPS: FindConstant /* 103 */
 external val FIND_SOURCES_ACTIVE: FindConstant /* 104 */
 external val FIND_SOURCES: FindConstant /* 105 */
-external val FIND_DROPPED_ENERGY: FindConstant /* -106 */
 external val FIND_DROPPED_RESOURCES: FindConstant /* 106 */
 external val FIND_STRUCTURES: FindConstant /* 107 */
 external val FIND_MY_STRUCTURES: FindConstant /* 108 */
