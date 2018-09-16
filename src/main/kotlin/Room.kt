@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package screeps
 
 import screeps.structure.StructureStorage

@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package screeps
 
 external object Memory {

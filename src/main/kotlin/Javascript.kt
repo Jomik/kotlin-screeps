@@ -1,5 +1,3 @@
-@file:Suppress("unused")
-
 package screeps
 
 fun <T> jsObject(init: dynamic.() -> Unit): T =
@@ -24,10 +22,12 @@ val <K, V>Record<K, V>.entries: Array<JsPair<K, V>> get() = js("Object").entries
 fun <K, V> Record<K, V>.iterator() = this.entries.iterator()
 fun <K, V> Record<K, V>.asIterable() = this.entries.asIterable()
 
+@Suppress("unused")
 fun <K, V> recordOf(vararg pairs: Pair<K, V>): Record<K, V> = mutableRecordOf(*pairs)
+
 fun <K, V> mutableRecordOf(vararg pairs: Pair<K, V>): MutableRecord<K, V> =
-  js("{}").unsafeCast<MutableRecord<K, V>>().also { result ->
+  jsObject {
     pairs.forEach { (k, v) ->
-      result[k] = v
+      this[k] = v
     }
   }

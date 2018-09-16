@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package screeps
 
 external class RoomPosition(x: Int, y: Int, roomName: String) : HasCoordinates, PortalDestination {

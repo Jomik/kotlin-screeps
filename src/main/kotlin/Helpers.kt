@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package screeps
 
 import screeps.structure.Structure
@@ -95,7 +97,7 @@ external interface FindClosestByPathOptions<T> : FindPathOptions, FilterOption<T
   val algorithm: AlgorithmConstant?
 }
 
-interface LookAtResult {
+external interface LookAtResult {
   val type: LookConstant
   val creep: Creep?
   val structure: Structure?
@@ -104,7 +106,7 @@ interface LookAtResult {
   val resource: Resource?
 }
 
-interface LookAtAreaArrayItem : LookAtResult {
+external interface LookAtAreaArrayItem : LookAtResult {
   val x: Int
   val y: Int
 }

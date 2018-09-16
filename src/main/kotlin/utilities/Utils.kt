@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package screeps.utilities
 
 import screeps.*
