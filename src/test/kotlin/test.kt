@@ -16,6 +16,8 @@ fun foo() {
   }
 
   val f = Game.rooms["foo"]
-  Memory.creeps["foo"] = jsObject { }
+  Memory.creeps["foo"] = jsObject {
+    bar = "bum"
+  }
 }
 
