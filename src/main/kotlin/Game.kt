@@ -2,6 +2,9 @@
 
 package screeps
 
+import screeps.structure.Structure
+import screeps.structure.StructureSpawn
+
 external object Game {
   val shard: Shard
   val map: Map
@@ -12,10 +15,10 @@ external object Game {
 
   val creeps: Record<String, Creep>
   val rooms: Record<String, Room>
-  val flags: Record<String, Any>
+  val flags: Record<String, Flag>
   val resources: Record<String, Int>
-  val spawns: Record<String, Any>
-  val structures: Record<String, Any>
+  val spawns: Record<String, StructureSpawn>
+  val structures: Record<String, Structure>
 
   fun getObjectById(id: String): RoomObject?
   fun notify(message: String, groupInterval: Int?)

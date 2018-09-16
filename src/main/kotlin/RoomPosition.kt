@@ -59,6 +59,6 @@ external class RoomPosition(x: Int, y: Int, roomName: String) : HasCoordinates, 
   fun isEqualTo(target: NavigationTarget): Boolean
   fun isNearTo(x: Int, y: Int): Boolean
   fun isNearTo(target: NavigationTarget): Boolean
-  fun look(): Array<Array<Any>>
+  fun look(): Array<LookAtResult>
   fun <T> lookFor(type: LookConstant): Array<T>
 }
