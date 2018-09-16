@@ -5,7 +5,12 @@ import screeps.*
 abstract external class StructureSpawn : Structure, Owned, EnergyContainer, Named {
   val memory: SpawnMemory
   val spawning: Spawning?
-  fun spawnCreep(body: Array<BodyPartConstant>, name: String, opts: SpawnOptions = definedExternally): ScreepsReturnCode
+  fun spawnCreep(
+    body: Array<BodyPartConstant>,
+    name: String,
+    opts: SpawnOptions? = definedExternally
+  ): ScreepsReturnCode
+
   fun recycleCreep(target: Creep): ScreepsReturnCode
   fun renewCreep(target: Creep): ScreepsReturnCode
 

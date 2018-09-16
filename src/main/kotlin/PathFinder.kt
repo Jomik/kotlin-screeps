@@ -3,10 +3,10 @@
 package screeps
 
 external object PathFinder {
-  fun search(origin: RoomPosition, goal: RoomPosition, options: Options = definedExternally)
-  fun search(origin: RoomPosition, goal: Array<RoomPosition>, options: Options = definedExternally)
-  fun search(origin: RoomPosition, goal: RoomPositionWithRange, options: Options = definedExternally)
-  fun search(origin: RoomPosition, goal: Array<RoomPositionWithRange>, options: Options = definedExternally)
+  fun search(origin: RoomPosition, goal: RoomPosition, options: Options? = definedExternally)
+  fun search(origin: RoomPosition, goal: Array<RoomPosition>, options: Options? = definedExternally)
+  fun search(origin: RoomPosition, goal: RoomPositionWithRange, options: Options? = definedExternally)
+  fun search(origin: RoomPosition, goal: Array<RoomPositionWithRange>, options: Options? = definedExternally)
 
   class CostMatrix {
     fun set(x: Int, y: Int, cost: Int)

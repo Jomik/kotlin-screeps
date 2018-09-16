@@ -13,6 +13,6 @@ abstract external class StructureTerminal : Structure, Owned {
     resourceType: ResourceConstant,
     amount: Int,
     destination: String,
-    description: String = definedExternally
+    description: String? = definedExternally
   ): ScreepsReturnCode
 }

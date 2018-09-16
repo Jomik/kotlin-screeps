@@ -9,44 +9,44 @@ external class RoomPosition(x: Int, y: Int, roomName: String) : HasCoordinates, 
 
   fun createConstructionSite(
     structureType: BuildableStructureConstant,
-    name: String = definedExternally
+    name: String? = definedExternally
   ): ScreepsReturnCode
 
   fun createFlag(
-    name: String = definedExternally,
-    color: ColorConstant = definedExternally,
-    secondaryColor: ColorConstant = definedExternally
+    name: String? = definedExternally,
+    color: ColorConstant? = definedExternally,
+    secondaryColor: ColorConstant? = definedExternally
   ): ScreepsReturnCode
 
   fun <T : RoomObject> findClosestByPath(
     objects: Array<NavigationTarget>,
-    opts: FindClosestByPathOptions<T> = definedExternally
+    opts: FindClosestByPathOptions<T>? = definedExternally
   ): T?
 
   fun <T : RoomObject> findClosestByPath(
     type: FindConstant,
-    opts: FindClosestByPathOptions<T> = definedExternally
+    opts: FindClosestByPathOptions<T>? = definedExternally
   ): T?
 
   fun <T : RoomObject> findClosestByRange(
     objects: Array<NavigationTarget>,
-    opts: FilterOption<T> = definedExternally
+    opts: FilterOption<T>? = definedExternally
   ): T?
 
   fun <T : RoomObject> findClosestByRange(
     type: FindConstant,
-    opts: FilterOption<T> = definedExternally
+    opts: FilterOption<T>? = definedExternally
   ): T?
 
   fun <T : RoomObject> findInRange(
     objects: Array<NavigationTarget>,
     range: Int,
-    opts: FilterOption<T> = definedExternally
+    opts: FilterOption<T>? = definedExternally
   ): Array<T>
 
   fun <T : RoomObject> findInRange(
     type: FindConstant,
-    range: Int, opts: FilterOption<T> = definedExternally
+    range: Int, opts: FilterOption<T>? = definedExternally
   ): Array<T>
 
   fun getDirectionTo(x: Int, y: Int): DirectionConstant

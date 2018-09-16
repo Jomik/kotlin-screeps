@@ -18,22 +18,22 @@ abstract external class Room : Named {
   fun createFlag(
     x: Int,
     y: Int,
-    name: String = definedExternally,
-    color: ColorConstant = definedExternally,
-    secondaryColor: ColorConstant = definedExternally
+    name: String? = definedExternally,
+    color: ColorConstant? = definedExternally,
+    secondaryColor: ColorConstant? = definedExternally
   ): ScreepsReturnCode
 
   fun createFlag(
     pos: RoomPosition,
-    name: String = definedExternally,
-    color: ColorConstant = definedExternally,
-    secondaryColor: ColorConstant = definedExternally
+    name: String? = definedExternally,
+    color: ColorConstant? = definedExternally,
+    secondaryColor: ColorConstant? = definedExternally
   ): ScreepsReturnCode
 
-  fun <T : RoomObject> find(findConstant: FindConstant, opts: FilterOption<T> = definedExternally): Array<T>
+  fun <T : RoomObject> find(findConstant: FindConstant, opts: FilterOption<T>? = definedExternally): Array<T>
   fun findExitTo(room: String): ExitConstant
   fun findExitTo(room: Room): ExitConstant
-  fun findPath(fromPos: RoomPosition, toPos: RoomPosition, opts: FindPathOptions = definedExternally): Array<PathStep>
+  fun findPath(fromPos: RoomPosition, toPos: RoomPosition, opts: FindPathOptions? = definedExternally): Array<PathStep>
   fun getPositionAt(x: Int, y: Int): RoomPosition?
   fun lookAt(x: Int, y: Int): Array<LookAtResult>
   fun lookAt(target: NavigationTarget): Array<LookAtResult>
