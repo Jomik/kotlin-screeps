@@ -5,7 +5,7 @@ package screeps
 import screeps.structure.Structure
 import screeps.structure.StructureController
 
-abstract external class Creep : HasPos, Owned, Identifiable, Named {
+abstract external class Creep : RoomObject, HasPos, Owned, Identifiable, Named {
   val carry: StoreDefinition
   val carryCapacity: Int
   val body: Array<BodyPartConstant>
@@ -13,7 +13,6 @@ abstract external class Creep : HasPos, Owned, Identifiable, Named {
   val hits: Int
   val hitsMax: Int
   val memory: CreepMemory
-  val room: Room
   val spawning: Boolean
   val saying: String
   val ticksToLive: Int?
