@@ -19,8 +19,10 @@ inline val <K, V>Record<K, V>.values: Array<V> get () = js("Object").values(this
 inline val <K, V>Record<K, V>.keys: Array<K> get () = js("Object").keys(this).unsafeCast<Array<K>>()
 inline val <K, V>Record<K, V>.entries: Array<JsPair<K, V>> get() = js("Object").entries(this).unsafeCast<Array<JsPair<K, V>>>()
 
-inline fun <K, V> Record<K, V>.iterator() = this.entries.iterator()
+inline operator fun <K, V> Record<K, V>.iterator() = this.entries.iterator()
 inline fun <K, V> Record<K, V>.asIterable() = this.entries.asIterable()
+
+inline operator fun <K, V> Record<K, V>.contains(value: K) = this.keys.contains(value)
 
 @Suppress("unused")
 fun <K, V> recordOf(vararg pairs: Pair<K, V>): Record<K, V> = mutableRecordOf(*pairs)
