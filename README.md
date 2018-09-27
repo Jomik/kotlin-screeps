@@ -1,3 +1,5 @@
+*DEPRECATED: Use https://github.com/exaV/screeps-kotlin-types/*
+
 # Kotlin types for Screeps API
 
 [ ![Download](https://api.bintray.com/packages/jomik/kotlin-screeps/kotlin-screeps/images/download.svg) ](https://bintray.com/jomik/kotlin-screeps/kotlin-screeps/_latestVersion)
